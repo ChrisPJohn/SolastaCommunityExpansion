@@ -50,6 +50,7 @@ internal static class SpellsContext
     internal static readonly SpellDefinition BlessingOfRime = BuildBlessingOfRime();
     internal static readonly SpellDefinition BlindingSmite = BuildBlindingSmite();
     internal static readonly SpellDefinition BurstOfRadiance = BuildBurstOfRadiance();
+    internal static readonly SpellDefinition Command = BuildCommand();
     internal static readonly SpellDefinition CorruptingBolt = BuildCorruptingBolt();
     internal static readonly SpellDefinition CausticZap = BuildCausticZap();
     internal static readonly SpellDefinition ColorBurst = BuildColorBurst();
@@ -66,6 +67,7 @@ internal static class SpellsContext
     internal static readonly SpellDefinition PetalStorm = BuildPetalStorm();
     internal static readonly SpellDefinition PowerWordHeal = BuildPowerWordHeal();
     internal static readonly SpellDefinition PowerWordKill = BuildPowerWordKill();
+    internal static readonly SpellDefinition PsychicLance = BuildPsychicLance();
     internal static readonly SpellDefinition PsychicWhip = BuildPsychicWhip();
     internal static readonly SpellDefinition PulseWave = BuildPulseWave();
     internal static readonly SpellDefinition SearingSmite = BuildSearingSmite();
@@ -80,8 +82,6 @@ internal static class SpellsContext
     internal static readonly SpellDefinition Web = BuildWeb();
     internal static readonly SpellDefinition Wrack = BuildWrack();
     internal static readonly SpellDefinition WrathfulSmite = BuildWrathfulSmite();
-    internal static readonly SpellDefinition Command = BuildCommand();
-    internal static readonly SpellDefinition PsychicLance = BuildPsychicLance();
 
     private static SpellDefinition ConjureElementalInvisibleStalker { get; set; }
     internal static List<SpellDefinition> Spells { get; private set; } = [];
@@ -293,7 +293,7 @@ internal static class SpellsContext
         RegisterSpell(BuildDissonantWhispers(), 0, SpellListBard);
         RegisterSpell(EarthTremor, 0, SpellListBard, SpellListDruid, SpellListSorcerer, SpellListWizard);
         RegisterSpell(EnsnaringStrike, 0, SpellListRanger);
-        RegisterSpell(ElementalInfusion, 0, SpellListDruid, SpellListRanger, SpellListSorcerer, SpellListWizard);
+        RegisterSpell(ElementalInfusion, 0, SpellListDruid, SpellListRanger, SpellListSorcerer, SpellListWizard, spellListInventorClass);
         RegisterSpell(BuildFindFamiliar(), 0, SpellListWizard);
         RegisterSpell(BuildGiftOfAlacrity(), 0, SpellListWizard);
         RegisterSpell(BuildGoneWithTheWind(), 0, SpellListRanger);
